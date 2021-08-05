@@ -35,7 +35,7 @@ namespace EventsDemo
             this.productPriceLabel = new System.Windows.Forms.Label();
             this.productPriceTextBox = new System.Windows.Forms.TextBox();
             this.buyButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.errorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -90,23 +90,24 @@ namespace EventsDemo
             this.buyButton.Text = "Buy!";
             this.buyButton.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // errorMessage
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(27, 243);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "<Error message>";
+            this.errorMessage.AutoSize = true;
+            this.errorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.errorMessage.ForeColor = System.Drawing.Color.Red;
+            this.errorMessage.Location = new System.Drawing.Point(27, 243);
+            this.errorMessage.Name = "errorMessage";
+            this.errorMessage.Size = new System.Drawing.Size(140, 18);
+            this.errorMessage.TabIndex = 6;
+            this.errorMessage.Text = "<Error message>";
+            this.errorMessage.Visible = false;
             // 
             // BuyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 296);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.productPriceLabel);
             this.Controls.Add(this.productPriceTextBox);
@@ -128,6 +129,6 @@ namespace EventsDemo
         private System.Windows.Forms.Label productPriceLabel;
         private System.Windows.Forms.TextBox productPriceTextBox;
         private System.Windows.Forms.Button buyButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label errorMessage;
     }
 }

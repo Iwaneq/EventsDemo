@@ -86,6 +86,7 @@ namespace EventsDemo
             this.errorLabel.Size = new System.Drawing.Size(140, 18);
             this.errorLabel.TabIndex = 4;
             this.errorLabel.Text = "<Error message>";
+            this.errorLabel.Visible = false;
             // 
             // label1
             // 
@@ -97,6 +98,7 @@ namespace EventsDemo
             this.label1.Size = new System.Drawing.Size(124, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "<Process info>";
+            this.label1.Visible = false;
             // 
             // buyButton
             // 
