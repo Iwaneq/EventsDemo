@@ -34,7 +34,7 @@ namespace EventsDemo
             this.accountLabel = new System.Windows.Forms.Label();
             this.balanceLabel = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.processInfoLabel = new System.Windows.Forms.Label();
             this.buyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -82,23 +82,24 @@ namespace EventsDemo
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(418, 134);
+            this.errorLabel.MaximumSize = new System.Drawing.Size(300, 0);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(140, 18);
             this.errorLabel.TabIndex = 4;
             this.errorLabel.Text = "<Error message>";
             this.errorLabel.Visible = false;
             // 
-            // label1
+            // processInfoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(418, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 18);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "<Process info>";
-            this.label1.Visible = false;
+            this.processInfoLabel.AutoSize = true;
+            this.processInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.processInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.processInfoLabel.Location = new System.Drawing.Point(418, 107);
+            this.processInfoLabel.Name = "processInfoLabel";
+            this.processInfoLabel.Size = new System.Drawing.Size(124, 18);
+            this.processInfoLabel.TabIndex = 5;
+            this.processInfoLabel.Text = "<Process info>";
+            this.processInfoLabel.Visible = false;
             // 
             // buyButton
             // 
@@ -109,6 +110,7 @@ namespace EventsDemo
             this.buyButton.TabIndex = 6;
             this.buyButton.Text = "Buy something!";
             this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
             // DashboardForm
             // 
@@ -116,7 +118,7 @@ namespace EventsDemo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 303);
             this.Controls.Add(this.buyButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.processInfoLabel);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.balanceLabel);
             this.Controls.Add(this.accountLabel);
@@ -136,7 +138,7 @@ namespace EventsDemo
         private System.Windows.Forms.Label accountLabel;
         private System.Windows.Forms.Label balanceLabel;
         private System.Windows.Forms.Label errorLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label processInfoLabel;
         private System.Windows.Forms.Button buyButton;
     }
 }

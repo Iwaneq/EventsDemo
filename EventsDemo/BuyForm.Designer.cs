@@ -89,6 +89,7 @@ namespace EventsDemo
             this.buyButton.TabIndex = 5;
             this.buyButton.Text = "Buy!";
             this.buyButton.UseVisualStyleBackColor = true;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
             // 
             // errorMessage
             // 
@@ -96,6 +97,7 @@ namespace EventsDemo
             this.errorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.errorMessage.ForeColor = System.Drawing.Color.Red;
             this.errorMessage.Location = new System.Drawing.Point(27, 243);
+            this.errorMessage.MaximumSize = new System.Drawing.Size(340, 0);
             this.errorMessage.Name = "errorMessage";
             this.errorMessage.Size = new System.Drawing.Size(140, 18);
             this.errorMessage.TabIndex = 6;

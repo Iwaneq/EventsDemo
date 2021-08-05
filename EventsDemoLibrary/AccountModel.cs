@@ -13,9 +13,14 @@ namespace EventsDemoLibrary
         public event EventHandler<string> UpdateProcessInfoEvent;
         public decimal Balance { get; private set; }
 
-        public List<string> Transactions { get; set; }
+        public List<string> Transactions { get; set; } = new List<string>();
 
-        public void BuyProduct(ProductModel product)
+        public AccountModel(decimal balance)
+        {
+            Balance = balance;
+        }
+
+        public async void BuyProduct(ProductModel product)
         {
             //Check if product is valid
             var productValidationInfo = ValidateProduct(product);
@@ -23,7 +28,7 @@ namespace EventsDemoLibrary
             if(productValidationInfo == "")
             {
                 //If user can buy product, simulate buying
-                Task.Run(SimulateBuying).Wait();
+                await SimulateBuying();
 
                 //Update transactions list and balance info
                 Balance -= product.Price;
@@ -44,7 +49,7 @@ namespace EventsDemoLibrary
             for (int i = 0; i < 10; i++)
             {
                 UpdateProcessInfoEvent?.Invoke(this, $"Buying process - {i * 10}%");
-                await Task.Delay(2000);
+                await Task.Delay(500);
             }
             UpdateProcessInfoEvent?.Invoke(this, $"Buying process have been completed!");
         }
@@ -55,7 +60,7 @@ namespace EventsDemoLibrary
             {
                 return "Product name can't be null!";
             }
-            if(product.Price >= 0)
+            if(product.Price <= 0)
             {
                 return "Product price can't equal 0, or be lesser than 0";
             }
