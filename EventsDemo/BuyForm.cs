@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EventsDemo
 {
-    public partial class Form1 : Form
+    public partial class BuyForm : Form
     {
-        public Form1()
+        public BuyForm()
         {
             InitializeComponent();
         }
